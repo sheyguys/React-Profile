@@ -2,8 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import './App.css';
-import { Nav } from 'react-bootstrap';
+
+import Footer from './component/Footer';
 
 
 
@@ -12,7 +14,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'HappyCoding',
+      title: 'Happy Coding',
       headerLink: [
         { title: 'Home', path: '/' },
         { title: 'About', path: '/about' },
@@ -41,7 +43,7 @@ class App extends React.Component {
       <Router>
         <Container className="p-0" fluid={true}>
           <Navbar className="border-bottom" bg="transparent" expand="lg">
-            <Navbar.Brand>HappyCoding</Navbar.Brand>
+            <Navbar.Brand>Happy Coding</Navbar.Brand>
             <Navbar.Toggle className="border-0" aria-control="navbar-toggle"></Navbar.Toggle>
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
@@ -51,6 +53,7 @@ class App extends React.Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
+          <Footer></Footer>
         </Container>
       </Router>
     );
