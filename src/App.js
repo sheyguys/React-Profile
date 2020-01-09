@@ -6,7 +6,9 @@ import Nav from 'react-bootstrap/Nav';
 import './App.css';
 
 import Footer from './component/Footer';
-
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 
 class App extends React.Component {
@@ -20,20 +22,16 @@ class App extends React.Component {
         { title: 'About', path: '/about' },
         { title: 'Contact', path: '/contact' },
       ],
-      university: {
-        name: 'Suranaree University Of Thecnology',
-        faculty: 'Engineering',
-        subject: 'Computer Engineering'
-      },
-      me: {
+      home: {
         name: 'Kasinan Rordthab',
         faculty: 'Engineering',
         subject: 'Computer Engineering'
       },
-      meapprentice: {
-        name: 'Suranaree University Of Thecnology',
-        faculty: 'Engineering',
-        subject: 'Computer Engineering'
+      about: {
+        title: 'About Me',
+      },
+      contact: {
+        title: 'Let\'s Talk',
       },
     }
   }
@@ -44,6 +42,7 @@ class App extends React.Component {
         <Container className="p-0" fluid={true}>
           <Navbar className="border-bottom" bg="transparent" expand="lg">
             <Navbar.Brand>Happy Coding</Navbar.Brand>
+
             <Navbar.Toggle className="border-0" aria-control="navbar-toggle"></Navbar.Toggle>
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
@@ -53,7 +52,10 @@ class App extends React.Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          <Footer></Footer>
+          <Route path="/" exact render={ () => <HomePage name={this.state.home.name} faculty={this.state.home.faculty} subject={this.state.home.subject}/>}/> 
+          <Route path="/about" render={ () => <AboutPage title={this.state.about.title}/>}/> 
+          <Route path="/contact" render={ () => <ContactPage title={this.state.contact.title}/> }/> 
+          <Footer/>
         </Container>
       </Router>
     );
