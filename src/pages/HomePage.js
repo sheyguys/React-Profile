@@ -1,9 +1,10 @@
 import React from 'react';
+import Hero from '../component/Hero'
 
 function HomePage(props) {
 
     return (
-        <p>HappyCoding Home</p>
+        <Hero name={props.name} faculty={props.faculty} subject={props.subject}/> 
     )
 
 }
