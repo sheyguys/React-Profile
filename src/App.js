@@ -28,10 +28,10 @@ class App extends React.Component {
         subject: 'Computer Engineering'
       },
       about: {
-        title: 'About Me',
+        name: 'About Me',
       },
       contact: {
-        title: 'Let\'s Talk',
+        name: 'Let\'s Talk',
       },
     }
   }
@@ -43,7 +43,7 @@ class App extends React.Component {
           <Navbar className="border-bottom" bg="transparent" expand="lg">
             <Navbar.Brand>Happy Coding</Navbar.Brand>
 
-            <Navbar.Toggle className="border-0" aria-control="navbar-toggle"></Navbar.Toggle>
+            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle"></Navbar.Toggle>
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
@@ -52,9 +52,9 @@ class App extends React.Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          <Route path="/" exact render={ () => <HomePage name={this.state.home.name} faculty={this.state.home.faculty} subject={this.state.home.subject}/>}/> 
-          <Route path="/about" render={ () => <AboutPage title={this.state.about.title}/>}/> 
-          <Route path="/contact" render={ () => <ContactPage title={this.state.contact.title}/> }/> 
+          <Route path="/" exact render={ () => <HomePage name={this.state.home.name} faculty={this.state.home.faculty} subject={this.state.home.subject}/>} /> 
+          <Route path="/about" render={ () => <AboutPage name={this.state.about.name} />} /> 
+          <Route path="/contact" render={ () => <ContactPage name={this.state.contact.name}/>} /> 
           <Footer/>
         </Container>
       </Router>
