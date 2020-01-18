@@ -1,5 +1,8 @@
 import React from 'react';
 import Card from '../component/Card'
+import Ping from '../assets/pping.jpg'
+import AppMan from '../assets/appman.png'
+import Sut from '../assets/sut.jpg'
 import Jisoo from '../assets/jisoo.jpg'
 import Dahee from '../assets/dahee.jpg'
 import MinYong from '../assets/parkminyoung.png'
@@ -12,28 +15,28 @@ class Carousel extends React.Component {
             items: [
                 {
                     id: 0,
-                    title: 'Dahee',
-                    subTitle: 'ssss',
-                    imgSrc: Dahee,
-                    link: 'https://ffff.com',
+                    title: 'University',
+                    subTitle: 'Suranaree University of Technology',
+                    imgSrc: Sut,
+                    link: 'http://www.sut.ac.th/2012/index.php',
                     selected: false
 
                 },
                 {
                     id: 1,
-                    title: 'Jisoo',
-                    subTitle: 'ssss',
-                    imgSrc: Jisoo,
-                    link: 'https://www.react-spring.io/',
+                    title: 'Myself',
+                    subTitle: 'Mr. Kasinan Rordthab',
+                    imgSrc: Ping,
+                    link: 'https://github.com/sheyguys',
                     selected: false
 
                 },
                 {
                     id: 2,
-                    title: 'Minyoung',
-                    subTitle: 'ssss',
-                    imgSrc: MinYong,
-                    link: 'https://ffff.com',
+                    title: 'Internship',
+                    subTitle: 'AppMan Co.,Ltd',
+                    imgSrc: AppMan,
+                    link: 'https://www.appman.co.th/',
                     selected: false
 
                 },
