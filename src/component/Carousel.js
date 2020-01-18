@@ -3,9 +3,6 @@ import Card from '../component/Card'
 import Ping from '../assets/pping.jpg'
 import AppMan from '../assets/appman.png'
 import Sut from '../assets/sut.jpg'
-import Jisoo from '../assets/jisoo.jpg'
-import Dahee from '../assets/dahee.jpg'
-import MinYong from '../assets/parkminyoung.png'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 class Carousel extends React.Component {
